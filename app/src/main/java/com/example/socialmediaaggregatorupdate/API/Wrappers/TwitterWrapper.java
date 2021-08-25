@@ -26,7 +26,8 @@ public class TwitterWrapper {
 
     private Twitter twitter;
 
-    private TwitterWrapper() {}
+    private TwitterWrapper() {
+    }
 
     public static TwitterWrapper init(String accessToken, String accessTokenSecret, boolean useOAuth2) {
         instance = new TwitterWrapper();
@@ -66,3 +67,21 @@ public class TwitterWrapper {
         return new ArrayList<>(TwitterParser.getInstance().parse(result.getTweets()));
     }
 
+    // Publish a tweet on behalf of the connected user
+    public void publishTweet(String message, String imageUrl) throws TwitterException, IOException {
+        StatusUpdate statusUpdate = new StatusUpdate(message);
+        if (imageUrl != null)
+            statusUpdate.setMedia("img", new URL(imageUrl).openConnection().getInputStream());
+        twitter.updateStatus(statusUpdate);
+    }
+
+    // Get the OAuth2Token for the cases the user is not authenticated
+    public OAuth2Token requestOAuth2Token() throws TwitterException, IllegalStateException {
+        return twitter.getOAuth2Token();
+    }
+
+    public void setOAuth2Token(OAuth2Token token) {
+        if (token != null)
+            twitter.setOAuth2Token(token);
+    }
+}

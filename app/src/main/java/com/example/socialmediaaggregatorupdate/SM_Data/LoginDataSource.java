@@ -16,7 +16,7 @@ public class LoginDataSource {
             LoggedUser fakeUser =
                     new LoggedUser(
                             java.util.UUID.randomUUID().toString(),
-                            "Jane Doe");
+                            "Joey Jordison");
             return new Result.Success<>(fakeUser);
         } catch (Exception e) {
             return new Result.Error(new IOException("Error logging in", e));
