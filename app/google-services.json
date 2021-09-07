@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "409780488653",
+    "project_id": "social-media-aggregator-update",
+    "storage_bucket": "social-media-aggregator-update.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:409780488653:android:17bbe470669418415b1c84",
+        "android_client_info": {
+          "package_name": "gr.uom.socialmediaaggregator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "409780488653-f5g74scf1ndf7vlvp5kpaspvcn0m15pj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXioBDZzOqNZFtjj3iMmM2F8WVSJk8NOc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "409780488653-f5g74scf1ndf7vlvp5kpaspvcn0m15pj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

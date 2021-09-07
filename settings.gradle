@@ -1,2 +1,2 @@
-rootProject.name = "Social Media Aggregator Update"
 include ':app'
+rootProject.name = "Social Media Aggregaton"
