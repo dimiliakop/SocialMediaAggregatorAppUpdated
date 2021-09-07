@@ -57,7 +57,7 @@ dependencies {
 
 
     // Twitter4j
-    implementation "org.twitter4j:twitter4j-core:4.0.7"
+    implementation "org.twitter4j:twitter4j-core:4.0.3"
 
     // Facebook login
     implementation 'com.facebook.android:facebook-login:4.42.0'

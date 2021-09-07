@@ -3,7 +3,7 @@
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in">Sign in or Sign Up</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="welcome">"Welcome !"</string>
     <string name="invalid_username">Not a valid username</string>
@@ -27,7 +27,7 @@
     <string name="nav_story">Story</string>
     <string name="add_an_image">Add an Image</string>
 
-    <string name="facebook_app_id">372315733830406</string>
-    <string name="fb_login_protocol_scheme">fb372315733830406</string>
+    <string name="facebook_app_id">312325293918440</string>
+    <string name="fb_login_protocol_scheme">fb312325293918440</string>
 
 </resources>

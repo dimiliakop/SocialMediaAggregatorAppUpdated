@@ -21,6 +21,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreSettings;
 
 import gr.uom.socialmediaaggregator.R;
 import gr.uom.socialmediaaggregator.api.tasks.GetFacebookDataTask;
@@ -46,6 +47,7 @@ public class LoginActivity extends AppCompatActivity {
                 .get(LoginViewModel.class);
 
         mAuth = FirebaseAuth.getInstance();
+
         db = FirebaseFirestore.getInstance();
 
         // Fetch API keys
@@ -159,13 +161,16 @@ public class LoginActivity extends AppCompatActivity {
                             new GetTwitterOAuth2TokenTask(v -> getFacebookDataAndChangeActivity()).execute();
                         }
                     }
+                    else{
+
+                    }
                 });
     }
 
     private void getFacebookDataAndChangeActivity() {
         // Get the necessary credentials from Facebook and go to the next activity
         new GetFacebookDataTask(v1 -> {
-            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            Intent intent = new Intent(this, MainActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
         }).execute();

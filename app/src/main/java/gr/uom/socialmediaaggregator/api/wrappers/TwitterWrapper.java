@@ -36,6 +36,7 @@ public class TwitterWrapper {
                 .setOAuthConsumerSecret(BuildConfig.TWITTER_API_KEY_SECRET)
                 .setOAuthAccessToken(accessToken)
                 .setOAuthAccessTokenSecret(accessTokenSecret);
+
         instance.twitter = new TwitterFactory(config.build()).getInstance();
         return instance;
     }
