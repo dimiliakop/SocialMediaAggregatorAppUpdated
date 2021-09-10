@@ -15,7 +15,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/com_facebook_button_login_background_color"
+            android:background="@color/teal_200"
             app:popupTheme="@style/Theme.SocialMediaAggregatorNew.PopupOverlay" />
 
     </com.google.android.material.appbar.AppBarLayout>

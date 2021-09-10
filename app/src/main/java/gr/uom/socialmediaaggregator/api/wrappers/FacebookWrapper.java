@@ -1,5 +1,6 @@
 package gr.uom.socialmediaaggregator.api.wrappers;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.facebook.AccessToken;
@@ -31,6 +32,8 @@ public class FacebookWrapper {
 
     // Singleton stuff
     private static FacebookWrapper instance;
+    private static String message = "message";
+    private static String url = "url";
 
     public static FacebookWrapper init(AccessToken accessToken) {
         instance = new FacebookWrapper(accessToken);
@@ -103,11 +106,11 @@ public class FacebookWrapper {
     public GraphResponse publishPostToFacebookPage(String message, String imageUrl) {
         try {
             JSONObject body = new JSONObject();
-            body.put("message", message);
+            body.put(this.message, message);
 
             GraphRequest request;
             if (imageUrl != null) {
-                body.put("url", imageUrl);
+                body.put(this.url, imageUrl);
                 request = GraphRequest.newPostRequest(pageAccessToken, String.format("%s/photos", fbPageId), body, null);
             } else {
                 request = GraphRequest.newPostRequest(pageAccessToken, String.format("%s/feed", fbPageId), body, null);

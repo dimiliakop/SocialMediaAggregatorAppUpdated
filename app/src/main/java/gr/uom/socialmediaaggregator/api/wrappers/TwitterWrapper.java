@@ -31,6 +31,11 @@ public class TwitterWrapper {
     public static TwitterWrapper init(String accessToken, String accessTokenSecret, boolean useOAuth2) {
         instance = new TwitterWrapper();
         ConfigurationBuilder config = new ConfigurationBuilder()
+                .setOAuthAuthenticationURL("https://api.twitter.com/oauth/request_token")
+                .setOAuthAccessTokenURL("https://api.twitter.com/oauth/access_token")
+                .setOAuthAuthorizationURL("https://api.twitter.com/oauth/authorize")
+                .setOAuthRequestTokenURL("https://api.twitter.com/oauth/request_token")
+                .setRestBaseURL("https://api.twitter.com/1.1/")
                 .setApplicationOnlyAuthEnabled(useOAuth2)
                 .setOAuthConsumerKey(BuildConfig.TWITTER_API_KEY)
                 .setOAuthConsumerSecret(BuildConfig.TWITTER_API_KEY_SECRET)
@@ -44,7 +49,11 @@ public class TwitterWrapper {
     public static TwitterWrapper init() {
         instance = new TwitterWrapper();
         ConfigurationBuilder config = new ConfigurationBuilder()
-                .setApplicationOnlyAuthEnabled(true)
+                .setOAuthAuthenticationURL("https://api.twitter.com/oauth/request_token")
+                .setOAuthAccessTokenURL("https://api.twitter.com/oauth/access_token")
+                .setOAuthAuthorizationURL("https://api.twitter.com/oauth/authorize")
+                .setOAuthRequestTokenURL("https://api.twitter.com/oauth/request_token")
+                .setRestBaseURL("https://api.twitter.com/1.1/")
                 .setOAuthConsumerKey(BuildConfig.TWITTER_API_KEY)
                 .setOAuthConsumerSecret(BuildConfig.TWITTER_API_KEY_SECRET);
         instance.twitter = new TwitterFactory(config.build()).getInstance();

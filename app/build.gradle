@@ -61,6 +61,7 @@ dependencies {
 
     // Facebook login
     implementation 'com.facebook.android:facebook-login:4.42.0'
+    implementation 'com.facebook.android:facebook-share:4.42.0'
     implementation 'com.facebook.android:facebook-android-sdk:4.42.0'
 
     implementation 'joda-time:joda-time:2.10.9'
