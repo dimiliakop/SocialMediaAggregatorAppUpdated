@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="gr.uom.socialmediaaggregator.ui.main.ui.home.HomeFragment"
+        android:name="gr.uom.socialmediaaggregator.UI.Main.UI.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -17,17 +17,17 @@
 
     <fragment
         android:id="@+id/nav_create"
-        android:name="gr.uom.socialmediaaggregator.ui.main.ui.create.CreateFragment"
+        android:name="gr.uom.socialmediaaggregator.UI.Main.UI.create.CreateFragment"
         android:label="@string/menu_create" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="gr.uom.socialmediaaggregator.ui.main.ui.connect.ConnectFragment"
+        android:name="gr.uom.socialmediaaggregator.UI.Main.UI.connect.ConnectFragment"
         android:label="@string/menu_connect"
         tools:layout="@layout/fragment_connect" />
     <fragment
         android:id="@+id/viewPostsFragment"
-        android:name="gr.uom.socialmediaaggregator.ui.main.ui.view_posts.ViewPostsFragment"
+        android:name="gr.uom.socialmediaaggregator.UI.Main.UI.view_posts.ViewPostsFragment"
         android:label="@string/view_posts_label"
         tools:layout="@layout/fragment_view_posts" />
 </navigation>

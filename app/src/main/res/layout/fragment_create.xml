@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.main.ui.create.CreateFragment">
+    tools:context=".UI.Main.UI.create.CreateFragment">
 
     <EditText
         android:id="@+id/txtPostText"
@@ -45,6 +45,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Publish on:"
         app:layout_constraintStart_toStartOf="@+id/btnSelectImage"
@@ -84,6 +85,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:background="@color/com_facebook_button_send_background_color"
         android:enabled="false"
         android:text="Publish"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"

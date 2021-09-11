@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.main.ui.view_posts.ViewPostsFragment">
+    tools:context=".UI.Main.UI.view_posts.ViewPostsFragment">
 
     <ListView
         android:id="@+id/postList"
